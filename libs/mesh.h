@@ -1,5 +1,5 @@
-#ifndef MESH_CLASS_H
-#define MESH_CLASS_H
+#ifndef MESH_CLASS
+#define MESH_CLASS
 
 #include<string>
 #include"VAO.h"

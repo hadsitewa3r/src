@@ -1,5 +1,5 @@
-#ifndef TEXTURE_CLASS_H
-#define TEXTURE_CLASS_H
+#ifndef TEXTURE_CLASS
+#define TEXTURE_CLASS
 
 #include <iostream>
 #include "glad/glad.h"

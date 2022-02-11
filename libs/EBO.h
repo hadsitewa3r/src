@@ -1,5 +1,5 @@
-#ifndef EBO_CLASS_H
-#define EBO_CLASS_H
+#ifndef EBO_CLASS
+#define EBO_CLASS
 
 #include"glad/glad.h"
 #include<vector>

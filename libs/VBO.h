@@ -1,5 +1,5 @@
-#ifndef VBO_CLASS_H
-#define VBO_CLASS_H
+#ifndef VBO_CLASS
+#define VBO_CLASS
 
 #include"glm/glm.hpp"
 #include"glad/glad.h"

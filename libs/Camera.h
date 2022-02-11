@@ -1,5 +1,5 @@
-#ifndef CAMERA_CLASS_H
-#define CAMERA_CLASS_H
+#ifndef CAMERA_CLASS
+#define CAMERA_CLASS
 
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
