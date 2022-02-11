@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jan 23 05:04:42 2022
+# Make data base, printed on Fri Feb 11 13:01:44 2022
 
 # Variables
 
@@ -19,9 +19,9 @@ LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.814
+I3SOCK = /run/user/1000/i3/ipc-socket.2904
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-3ac2379b-d0d4-4389-a133-cf32ca6877b7.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2111062f-9066-4a31-9059-b5842236881f.sock
 # environment
 LC_NAME = en_GB.UTF-8
 # environment
@@ -55,9 +55,9 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/hackerman/.config/Code - OSS/CachedData/b3318bc0524af3d74034b8bb8a64df0ccf35549a
+VSCODE_CODE_CACHE_PATH = /home/hackerman/.config/Code - OSS/CachedData/5554b12acf27056905806867f251c859323ff7e9
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # environment
 LANG = C
 # environment
@@ -93,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2623549
+VSCODE_PID = 42102
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -129,7 +129,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /home/hackerman/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+PATH = /home/hackerman/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/home/hackerman/.local/share/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 # default
 MAKEFILES := 
 # environment
@@ -197,9 +197,9 @@ HOME = /home/hackerman
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-3fa320ed-1.62.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-3fa320ed-1.64.0-main.sock
 # environment
-XDG_SESSION_ID = 1
+XDG_SESSION_ID = 4
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -227,9 +227,9 @@ LC_IDENTIFICATION = en_GB.UTF-8
 
 # Directories
 
-# . (device 2050, inode 6695050): 20 files, no impossibilities.
+# . (device 2050, inode 6695050): 22 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -237,18 +237,18 @@ LC_IDENTIFICATION = en_GB.UTF-8
 
 # Files
 
-compile: glad.o shaderClass.o VBO.o VAO.o EBO.o main.o
+compile: glad.o shaderClass.o VBO.o VAO.o EBO.o Textures.o Camera.o mesh.o main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 37):
-	g++ build/glad.o build/shaderClass.o build/VBO.o build/VAO.o build/EBO.o build/Textures.o build/main.o -o a.out -ldl -lglfw
+#  recipe to execute (from 'Makefile', line 43):
+	g++ build/glad.o build/shaderClass.o build/VBO.o build/VAO.o build/EBO.o build/Textures.o build/Camera.o build/mesh.o build/main.o -o a.out -ldl -lglfw
 
 VAO.o: VAO.cpp libs/VAO.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 15):
+#  recipe to execute (from 'Makefile', line 18):
 	g++ -c VAO.cpp -ldl -lglfw -o build/VAO.o
 
 # Not a target:
@@ -286,19 +286,20 @@ Camera.o: Camera.cpp
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 24):
+#  recipe to execute (from 'Makefile', line 27):
 	g++ -c Camera.cpp -ldl -lglfw -o build/Camera.o
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-01-23 05:02:21.22507005
+#  Last modified 2022-02-11 12:56:36.010286204
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 Camera.cpp:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -306,11 +307,17 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 30):
+#  recipe to execute (from 'Makefile', line 36):
 	rm a.out build/*.o
 
 # Not a target:
 VBO.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+mesh.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -331,7 +338,7 @@ VBO.o: VBO.cpp libs/VBO.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 12):
+#  recipe to execute (from 'Makefile', line 15):
 	g++ -c VBO.cpp -ldl -lglfw -o build/VBO.o
 
 # Not a target:
@@ -340,12 +347,12 @@ VBO.o: VBO.cpp libs/VBO.h
 #  Modification time never checked.
 #  File has not been updated.
 
-output: glad.o shaderClass.o VBO.o VAO.o EBO.o Textures.o Camera.o main.o
+output: glad.o stb_image.o shaderClass.o VBO.o VAO.o EBO.o Textures.o Camera.o mesh.o main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 3):
-	g++ build/glad.o build/shaderClass.o build/VBO.o build/VAO.o build/EBO.o build/Textures.o build/Camera.o build/main.o -o a.out -ldl -lglfw
+	g++ build/glad.o build/stb_image.o build/shaderClass.o build/VBO.o build/VAO.o build/EBO.o build/Textures.o build/Camera.o build/mesh.o build/main.o -o a.out -ldl -lglfw
 
 # Not a target:
 all:
@@ -358,7 +365,7 @@ run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 33):
+#  recipe to execute (from 'Makefile', line 39):
 	make
 	./a.out
 
@@ -372,7 +379,7 @@ Textures.o: Textures.cpp libs/Textures.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 21):
+#  recipe to execute (from 'Makefile', line 24):
 	g++ -c Textures.cpp -ldl -lglfw -o build/Textures.o
 
 # Not a target:
@@ -391,15 +398,22 @@ main.o: main.cpp
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 27):
+#  recipe to execute (from 'Makefile', line 33):
 	g++ -c main.cpp -ldl -lglfw -o build/main.o
 
 EBO.o: EBO.cpp libs/EBO.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 18):
+#  recipe to execute (from 'Makefile', line 21):
 	g++ -c EBO.cpp -ldl -lglfw -o build/EBO.o
+
+mesh.o: mesh.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 30):
+	g++ -c mesh.cpp -ldl -lglfw -o build/mesh.o
 
 # Not a target:
 shaderClass.cpp:
@@ -413,28 +427,41 @@ VAO.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
-shaderClass.o: shaderClass.cpp libs/shaderClass.h
+stb_image.o: stb_image.cpp
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 9):
+	g++ -c stb_image.cpp -ldl -lglfw -o build/stb_image.o
+
+# Not a target:
+stb_image.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+shaderClass.o: shaderClass.cpp libs/shaderClass.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 12):
 	g++ -c shaderClass.cpp -ldl -lglfw -o build/shaderClass.o
 
 # files hash-table stats:
-# Load=29/1024=3%, Rehash=0, Collisions=0/74=0%
+# Load=33/1024=3%, Rehash=0, Collisions=0/87=0%
 # VPATH Search Paths
+ 
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 42 / storage = 383 B / avg = 9 B
-# current buf: size = 8162 B / used = 383 B / count = 42 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 46 / storage = 421 B / avg = 9 B
+# current buf: size = 8162 B / used = 421 B / count = 46 / avg = 9 B
 
- 
-# strcache performance: lookups = 80 / hit rate = 47%
+# strcache performance: lookups = 93 / hit rate = 50%
 # hash-table stats:
-# Load=42/8192=1%, Rehash=0, Collisions=0/80=0%
-# Finished Make data base on Sun Jan 23 05:04:42 2022
+# Load=46/8192=1%, Rehash=0, Collisions=0/93=0%
+# Finished Make data base on Fri Feb 11 13:01:44 2022
 
  

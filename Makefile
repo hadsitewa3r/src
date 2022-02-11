@@ -1,9 +1,12 @@
 
-output: glad.o shaderClass.o VBO.o VAO.o EBO.o Textures.o Camera.o main.o
-	g++ build/glad.o build/shaderClass.o build/VBO.o build/VAO.o build/EBO.o build/Textures.o build/Camera.o build/main.o -o a.out -ldl -lglfw
+output: glad.o stb_image.o shaderClass.o VBO.o VAO.o EBO.o Textures.o Camera.o mesh.o main.o
+	g++ build/glad.o build/stb_image.o build/shaderClass.o build/VBO.o build/VAO.o build/EBO.o build/Textures.o build/Camera.o build/mesh.o build/main.o -o a.out -ldl -lglfw
 
 glad.o: glad.c
 	gcc -c glad.c -ldl -lglfw -o build/glad.o
+
+stb_image.o: stb_image.cpp
+	g++ -c stb_image.cpp -ldl -lglfw -o build/stb_image.o
 
 shaderClass.o: shaderClass.cpp libs/shaderClass.h
 	g++ -c shaderClass.cpp -ldl -lglfw -o build/shaderClass.o
@@ -23,6 +26,9 @@ Textures.o: Textures.cpp libs/Textures.h
 Camera.o: Camera.cpp
 	g++ -c Camera.cpp -ldl -lglfw -o build/Camera.o
 
+mesh.o: mesh.cpp
+	g++ -c mesh.cpp -ldl -lglfw -o build/mesh.o
+
 main.o: main.cpp
 	g++ -c main.cpp -ldl -lglfw -o build/main.o
 
@@ -33,5 +39,5 @@ run:
 	make
 	./a.out
 
-compile: glad.o shaderClass.o VBO.o VAO.o EBO.o main.o
-	g++ build/glad.o build/shaderClass.o build/VBO.o build/VAO.o build/EBO.o build/Textures.o build/main.o -o a.out -ldl -lglfw
+compile: glad.o shaderClass.o VBO.o VAO.o EBO.o Textures.o Camera.o mesh.o main.o
+	g++ build/glad.o build/shaderClass.o build/VBO.o build/VAO.o build/EBO.o build/Textures.o build/Camera.o build/mesh.o build/main.o -o a.out -ldl -lglfw

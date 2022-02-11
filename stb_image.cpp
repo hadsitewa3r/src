@@ -1,5 +1,2 @@
 #define STB_IMAGE_IMPLEMENTATION
-#include "libs/shaderClass.h"
-
-int main(){
-}
+#include "libs/stb_image.h"

@@ -19,7 +19,7 @@ public:
 
   float width;
   float height;
-  float speed = 0.1f;
+  float speed = 0.0001f;
   float sens = 100.0f;
 
   // Prevents the camera from jumping around when first clicking left click
